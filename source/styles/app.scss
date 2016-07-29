@@ -1,13 +1,38 @@
+button {
+    position: absolute;
+    top: 400px;
+    padding: 20px 50px;
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 18px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
 .slots {
-
+    position: relative;
+    width: 376px;
+    height: 382px;
+    margin: 0 auto;
+    background-image: url('../img/bg.png');
 }
 
-$reel-size: 100px;
+.reels {
+    position: absolute;
+    top: 120px;
+    left: 33px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+$reel-size: 85px;
 
 .reel {
     float: left;
     height: $reel-size;
     width: $reel-size;
+    margin-right: 25px;
     overflow: hidden;
 }
 

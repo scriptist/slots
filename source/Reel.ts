@@ -19,7 +19,7 @@ export default class Reel {
         this.innerElm = document.createElement('div');
         this.innerElm.className = 'reel__inner';
 
-        this.width = 100;
+        this.width = 85;
         this.height = this.width * pictures.length;
         this.startedPos = Math.floor(Math.random() * pictures.length) * this.width;
 
