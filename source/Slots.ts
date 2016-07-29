@@ -9,13 +9,17 @@ export default class Slots {
     constructor(parentElm, pictures) {
         this.parentElm = parentElm;
         this.pictures = pictures;
-        this.reels = new Array();
+        this.reels = [];
+
+        const reelsElm = document.createElement('div');
+        reelsElm.className = 'reels';
+        this.parentElm.appendChild(reelsElm);
 
         for (let i = 0; i < 3; i++) {
             const elm = document.createElement('div');
             elm.className = 'reel';
             this.reels.push(new Reel(elm, this.pictures));
-            this.parentElm.appendChild(elm);
+            reelsElm.appendChild(elm);
         }
 
         const buttonElm = document.createElement('button');
