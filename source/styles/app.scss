@@ -1,0 +1,19 @@
+.slots {
+
+}
+
+$reel-size: 100px;
+
+.reel {
+    float: left;
+    height: $reel-size;
+    width: $reel-size;
+    overflow: hidden;
+}
+
+.reel__inner {
+    img {
+        vertical-align: bottom;
+        width: 100%;
+    }
+}

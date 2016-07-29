@@ -1,0 +1,33 @@
+{
+  "name": "world",
+  "version": "0.0.1",
+  "description": "TypeScript implementation of: https://github.com/tegioz/world",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scriptist/world.git"
+  },
+  "author": "Michael Berman <me@scripti.st>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scriptist/world/issues"
+  },
+  "homepage": "https://github.com/scriptist/world#readme",
+  "scripts": {
+    "dev": "webpack-dev-server --progress --colors --inline",
+    "start": "npm run dev"
+  },
+  "devDependencies": {
+    "awesome-typescript-loader": "^2.1.0",
+    "css-loader": "^0.23.1",
+    "html-webpack-plugin": "^2.22.0",
+    "image-webpack-loader": "^2.0.0",
+    "node-sass": "^3.8.0",
+    "sass-lint": "^1.8.2",
+    "sass-loader": "^4.0.0",
+    "style-loader": "^0.13.1",
+    "tslint": "^3.13.0",
+    "typescript": "^1.8.10",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
