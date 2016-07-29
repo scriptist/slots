@@ -14,6 +14,7 @@
   "homepage": "https://github.com/scriptist/world#readme",
   "scripts": {
     "dev": "webpack-dev-server --progress --colors --inline",
+    "build": "webpack --progress --colors --inline",
     "start": "npm run dev"
   },
   "devDependencies": {
