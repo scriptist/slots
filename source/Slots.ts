@@ -2,6 +2,7 @@ import Reel from './Reel';
 
 export default class Slots {
     private parentElm: HTMLElement;
+    private outputElm: HTMLElement;
     private pictures: Array<string>;
     private reels: Array<Reel>;
 
@@ -18,9 +19,14 @@ export default class Slots {
         }
 
         const buttonElm = document.createElement('button');
+        buttonElm.className = 'start';
         buttonElm.innerText = 'Start';
         buttonElm.addEventListener('click', () => this.start());
         this.parentElm.appendChild(buttonElm);
+
+        this.outputElm = document.createElement('div');
+        this.outputElm.className = 'output';
+        this.parentElm.appendChild(this.outputElm);
     }
 
     private randomBetween(min, max) {
@@ -40,9 +46,9 @@ export default class Slots {
             const result = this.reels.reduce((p, r) => p + Math.round(r.currentPos / r.width), 0);
 
             if (result === 0) {
-                alert('YOU WIN!');
+                this.outputElm.innerText = 'YOU WIN!';
             } else {
-                alert('You lose');
+                this.outputElm.innerText = 'You lose';
             }
         }, stopTime + 500);
     }
