@@ -51,7 +51,7 @@ export default class Slots {
         setTimeout(() => {
             const result = this.reels.reduce((p, r) => p + Math.round(r.currentPos / r.width), 0);
 
-            if (true || result === 0) {
+            if (result === 0) {
                 this.outputElm.innerText = 'YOU WIN!';
             } else {
                 this.outputElm.innerText = 'You lose';

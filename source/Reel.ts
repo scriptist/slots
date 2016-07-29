@@ -59,12 +59,12 @@ export default class Reel {
         let newPos = (this.startedPos + this.speed * (now - this.startedTime)) % this.height;
 
         if (!this.running) {
-            // if (newPos % this.width < this.currentPos % this.width) {
-            //     newPos = Math.floor(newPos / this.width) * this.width;
-            // }
-            if (newPos < this.currentPos) {
+            if (newPos % this.width < this.currentPos % this.width) {
                 newPos = Math.floor(newPos / this.width) * this.width;
             }
+            // if (newPos < this.currentPos) {
+            //     newPos = Math.floor(newPos / this.width) * this.width;
+            // }
         }
 
         this.innerElm.style.transform = `translateY(-${newPos}px)`;
